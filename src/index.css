@@ -36,6 +36,14 @@ nav {
   padding: 1rem 2rem;
 }
 
+.line {
+  width: 20%;
+  height: 0;
+  border: solid 5px white;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .search {
   width: 20px;
 }
@@ -43,6 +51,14 @@ nav {
 button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.options {
+  width: 100%;
 }
 
 .display-1 {
@@ -53,4 +69,71 @@ button {
 
 .lead {
   color: white;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dropdown {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #aaa;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.browse {
+  color: #aaa;
+  padding: 0.5rem;
+  margin-bottom: 0;
+}
+
+.arrow {
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1rem;
+  color: #aaa;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.featured {
+  background-color: #ddd;
+}
+
+.card {
+  padding: 0;
+}
+
+.card-featured {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  width: 80px;
+  text-align: center;
+}
+
+.card-text {
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.card-meal-types {
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+.clicked-meal-type {
+  border: 1px solid green;
+  cursor: pointer;
+}
+
+.img-fluid {
+  max-width: 150px;
 }
