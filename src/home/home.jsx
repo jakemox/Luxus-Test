@@ -1,13 +1,36 @@
 import React from 'react';
 import DropDown from '../dropdown/dropdown.jsx';
-// import SectionTwo from '../section-two/section-two.jsx';
 
 export default class Home extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isTop: true
+        }
+    }
+    
+    
+    
+    componentDidMount() {
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                this.setState({
+                    isTop: false
+                })
+            } else {
+                this.setState({
+                    isTop: true
+                })
+            }
+        });
+    }
+
     render() {
         return (
             <>
                 <header className="jumbotron jumbotron-fluid row align-items-center mx-0">
-                    <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
+                    <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${this.state.isTop === true ? 'nav-top' : 'nav-bottom'}`}>
                         <a className="navbar-brand dh-font" href="#">LUXUS</a>
                         <button className="search-icon navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>

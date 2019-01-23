@@ -1,5 +1,7 @@
 import React from 'react';
 import MealTypeCard from '../meal-type-card/meal-type-card.jsx';
+import SectionThree from '../section-three/section-three.jsx';
+
 
 const mealTypes = [
     {
@@ -37,7 +39,8 @@ export default class MealTypeDisplay extends React.Component {
         };
     }
 
-    changeColor = (data) => {
+    changeSelected = (data) => {
+        console.log('parent' + data.selected);
         this.setState({
             selected: data.selected
         })
@@ -57,13 +60,14 @@ export default class MealTypeDisplay extends React.Component {
                                     key={i}
                                     image={mealType.image}
                                     title={mealType.title}
-                                    action={this.changeColor}
+                                    action={this.changeSelected}
                                     color={this.state.selected === mealType.image ? 'clicked-meal-type' : 'card-meal-types'}
                                 />
                             )}
                         </div>
                     </div>
                 </section>
+                <SectionThree recipes={this.state.selected}/>
             </>
         )
     }

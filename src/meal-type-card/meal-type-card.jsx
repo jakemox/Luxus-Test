@@ -10,6 +10,7 @@ export default class SectionTwo extends React.Component {
     }
 
     action = () => {
+        console.log(this.props.image);
         this.props.action({
             selected: this.props.image
         })

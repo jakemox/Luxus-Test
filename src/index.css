@@ -23,8 +23,15 @@ body {
   background-size: cover;
 }
 
-nav {
+.nav-top {
   background-color: rgba(52, 58, 64, 0.5);
+  transition: 0.5s;
+}
+
+.nav-bottom {
+  background-color: rgba(0, 0, 0, 1);
+  transition: 0.5s;
+
 }
 
 .nav-item {
